@@ -1,0 +1,122 @@
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    animation: slideIn 0.5s ease-out;
+}
+
+h1 {
+    text-align: center;
+    color: #4CAF50;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    width: 90%;
+    padding: 50px 10px;
+    margin: 30px auto;
+    border: 2px solid #4CAF50;
+    border-radius: 30px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:focus {
+    border-color: #71b7e6;
+    box-shadow: 0 0 5px rgba(113, 183, 230, 0.5);
+    outline: none;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    background-color: #4CAF50;
+    color: aquamarine;
+    border: 2px solid red;
+    border-radius: 30px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #45a049;
+    transform: scale(1.02);
+}
+
+.result {
+    margin-top: 20px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.result.show {
+    opacity: 1;
+}
+
+#directDownloadLink {
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+    word-wrap: break-word;
+    padding: 10px;
+    background-color: #f1f1f1;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    color: #333;
+    text-decoration: none;
+}
+
+#directDownloadLink:hover {
+    background-color: #e2e2e2;
+}
+
+/* Keyframes for slide-in animation */
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+/* Blinking name styles */
+.hacker-name {
+    position: fixed;
+    bottom: 10px; /* Position it at the bottom */
+    left: 50%;
+    transform: translateX(-50%); /* Center it horizontally */
+    font-size: 24px; /* Font size */
+    font-family: 'Courier New', Courier, monospace; /* Hacker-style font */
+    color: #00ff00; /* Green color */
+    text-shadow: 
+        0 0 5px #00ff00, 
+        0 0 10px #00ff00, 
+        0 0 15px #00ff00, 
+        0 0 20px #00ff00, 
+        0 0 25px #00ff00; /* Glowing effect */
+    animation: blink 1s infinite; /* Blinking animation */
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+.author {
+    color: aqua
+}
